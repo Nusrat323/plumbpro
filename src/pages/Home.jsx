@@ -502,7 +502,7 @@ export default function Home() {
       </section>
 
       <section className="px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-4xl">
           <SectionHeading
             eyebrow="Customer reviews"
             title="Trusted by homeowners who want the job done right."
@@ -511,17 +511,21 @@ export default function Home() {
           />
 
           <div
-            className="relative mt-10"
+            className="relative mt-8"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <div className="relative min-h-[285px] overflow-hidden rounded-[1.5rem] border bg-white shadow-sm sm:min-h-[265px]"
+            <div
+              className="relative overflow-hidden rounded-2xl border bg-white shadow-sm"
               style={{
                 borderColor: 'var(--color-line)',
               }}
             >
-              <div className="absolute right-6 top-6 text-copper-500/10 sm:right-10 sm:top-8">
-                <Quote size={70} strokeWidth={1} />
+              <div className="absolute right-7 top-5 text-copper-500/[0.07]">
+                <Quote
+                  size={54}
+                  strokeWidth={1.2}
+                />
               </div>
 
               <AnimatePresence mode="wait">
@@ -529,7 +533,7 @@ export default function Home() {
                   key={activeReview}
                   initial={{
                     opacity: 0,
-                    x: 35,
+                    x: 25,
                   }}
                   animate={{
                     opacity: 1,
@@ -537,32 +541,36 @@ export default function Home() {
                   }}
                   exit={{
                     opacity: 0,
-                    x: -35,
+                    x: -25,
                   }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.45,
                     ease: [0.22, 1, 0.36, 1],
                   }}
-                  className="relative flex min-h-[285px] flex-col justify-between p-7 sm:min-h-[265px] sm:p-10"
+                  className="px-6 py-6 sm:px-8 sm:py-7"
                 >
-                  <div>
+                  <div className="flex items-center justify-between gap-4">
                     <div className="flex items-center gap-1">
                       {[1, 2, 3, 4, 5].map((star) => (
                         <Star
                           key={star}
-                          size={17}
+                          size={15}
                           fill="currentColor"
                           className="text-amber-500"
                         />
                       ))}
                     </div>
 
-                    <p className="mt-6 max-w-3xl text-lg font-medium leading-8 tracking-tight text-navy-950 sm:text-xl sm:leading-9">
-                      “{testimonials[activeReview].text}”
-                    </p>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-400">
+                      Verified customer
+                    </span>
                   </div>
 
-                  <div className="mt-7 flex items-center justify-between gap-4">
+                  <p className="mt-4 max-w-3xl text-base font-medium leading-7 text-navy-950 sm:text-lg sm:leading-8">
+                    “{testimonials[activeReview].text}”
+                  </p>
+
+                  <div className="mt-5 flex items-center justify-between gap-4 border-t border-slate-100 pt-4">
                     <div>
                       <p className="text-sm font-extrabold text-navy-950">
                         {testimonials[activeReview].name}
@@ -574,13 +582,13 @@ export default function Home() {
                     </div>
 
                     <div className="hidden items-center gap-2 sm:flex">
-                      <span className="text-xs font-bold text-slate-400">
+                      <span className="text-[10px] font-bold text-slate-400">
                         {String(activeReview + 1).padStart(2, '0')}
                       </span>
 
-                      <span className="h-px w-8 bg-slate-200" />
+                      <span className="h-px w-6 bg-slate-200" />
 
-                      <span className="text-xs font-bold text-slate-400">
+                      <span className="text-[10px] font-bold text-slate-400">
                         {String(testimonials.length).padStart(2, '0')}
                       </span>
                     </div>
@@ -589,7 +597,7 @@ export default function Home() {
               </AnimatePresence>
             </div>
 
-            <div className="mt-5 flex items-center justify-between">
+            <div className="mt-4 flex items-center justify-between">
               <div className="flex items-center gap-1.5">
                 {testimonials.map((testimonial, index) => (
                   <button
@@ -599,30 +607,30 @@ export default function Home() {
                     onClick={() => setActiveReview(index)}
                     className={`h-1.5 rounded-full transition-all duration-300 ${
                       activeReview === index
-                        ? 'w-7 bg-copper-500'
+                        ? 'w-6 bg-copper-500'
                         : 'w-1.5 bg-slate-300 hover:bg-slate-400'
                     }`}
                   />
                 ))}
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <button
                   type="button"
                   aria-label="Previous review"
                   onClick={previousReview}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all duration-200 hover:border-copper-500 hover:bg-copper-500 hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-200 hover:border-copper-500 hover:bg-copper-500 hover:text-white"
                 >
-                  <ChevronLeft size={17} />
+                  <ChevronLeft size={15} />
                 </button>
 
                 <button
                   type="button"
                   aria-label="Next review"
                   onClick={nextReview}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 transition-all duration-200 hover:border-copper-500 hover:bg-copper-500 hover:text-white"
+                  className="flex h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 transition-all duration-200 hover:border-copper-500 hover:bg-copper-500 hover:text-white"
                 >
-                  <ChevronRight size={17} />
+                  <ChevronRight size={15} />
                 </button>
               </div>
             </div>

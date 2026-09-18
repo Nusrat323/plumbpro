@@ -178,6 +178,20 @@ export const testimonials = [
       'Our water heater stopped working and they handled the replacement from start to finish. The whole process felt easy.',
     rating: 5,
   },
+  {
+    name: 'Daniel R.',
+    location: 'Brooklyn, NY',
+    text:
+      'We had a stubborn drain clog that kept coming back. PlumbPro found the cause, cleared it properly and had everything flowing normally again.',
+    rating: 5,
+  },
+  {
+    name: 'Emily K.',
+    location: 'Queens, NY',
+    text:
+      'We noticed a leak that was getting worse, and PlumbPro was able to locate the source quickly. They explained the issue clearly and took care of the repair without any hassle.',
+    rating: 5,
+  },
 ]
 
 export const stats = [

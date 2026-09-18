@@ -10,7 +10,6 @@ const PUBLIC_LINKS = [
   { to: '/about', label: 'About' },
   { to: '/services', label: 'Services' },
   { to: '/our-work', label: 'Our Work' },
-  { to: '/reviews', label: 'Reviews' },
   { to: '/faq', label: 'FAQ' },
   { to: '/contact', label: 'Contact' },
 ]
