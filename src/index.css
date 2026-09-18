@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+/*
+  Brand direction: "steady, working trust" — not a generic SaaS palette.
+  Deep marine blue (water/reliability) + a warm copper accent (pipework),
+  on a cool neutral background rather than the common cream/terracotta look.
+*/
+@theme {
+  --font-display: "Archivo", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-ink: #10181f;
+  --color-navy-950: #071626;
+  --color-navy-900: #0b2a4a;
+  --color-navy-700: #14406b;
+  --color-navy-500: #2c5f8f;
+  --color-copper-600: #b5591f;
+  --color-copper-500: #c1662f;
+  --color-copper-100: #fbe9dd;
+  --color-slate-600: #4d5c6b;
+  --color-slate-400: #8695a3;
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-line: #e3e7eb;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-copper-500);
+  outline-offset: 2px;
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: #fbe9dd; color: #0b2a4a; }
+input, select, textarea { border-color: var(--color-line); }
