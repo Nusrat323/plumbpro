@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 
 const EMERGENCY_PHONE = '+12125550123'
-const DISPLAY_PHONE = '(212) 555-0123'
+const DISPLAY_PHONE = '(555) 010-2200'
 
 const emergencyIssues = [
   {

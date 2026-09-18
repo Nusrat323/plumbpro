@@ -20,7 +20,7 @@ export default function Footer() {
             <li><Link to="/about" className="hover:text-white">About</Link></li>
             <li><Link to="/services" className="hover:text-white">Services</Link></li>
             <li><Link to="/our-work" className="hover:text-white">Our Work</Link></li>
-            <li><Link to="/reviews" className="hover:text-white">Reviews</Link></li>
+           
           </ul>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-wide text-slate-400">Contact</h4>
           <ul className="mt-3 space-y-2 text-sm text-slate-300">
             <li className="flex items-center gap-2"><Phone size={14} /> (555) 010-2200</li>
-            <li className="flex items-center gap-2"><Mail size={14} /> hello@plumbpro.example</li>
+            <li className="flex items-center gap-2"><Mail size={14} /> hello@plumbpro.com</li>
             <li className="flex items-center gap-2"><MapPin size={14} /> Serving the metro area</li>
             <li className="flex items-center gap-2"><Clock size={14} /> Mon–Sat, 7am–7pm · Emergency 24/7</li>
           </ul>
